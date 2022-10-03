@@ -12,12 +12,13 @@ align-items: center;
         width: 70px;
         height: 70px;
         background-color: #E0E0E0;
-        margin-left: -30%;
+        margin-left: 2%;
         border-radius: 8px;
     }
 
     div{
-        margin-bottom: 8%;
+        margin-bottom: 2%;
+        margin-right: 24%;
     }
 
     #cartProductP1{
@@ -39,7 +40,8 @@ align-items: center;
         background-color: #F5F5F5;
         font-size: 12px;
         color: #BDBDBD;
-        margin-bottom: 20%;
+        margin-bottom: 10%;
+        margin-right: 20%;
     }
 
     button:hover{

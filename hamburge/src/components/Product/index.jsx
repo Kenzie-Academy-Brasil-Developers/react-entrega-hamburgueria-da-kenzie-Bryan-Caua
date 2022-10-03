@@ -1,31 +1,27 @@
-import { useState } from 'react'
-import { ProductStyled } from './style'
+import { ProductStyled } from "./style";
 
-const Product = ( {listHamburgers, funciotnFilter} ) => {
+const Product = ({ listHamburgers, handleAddProduct }) => {
+  return (
+    <ProductStyled>
+      <ul>
+        {listHamburgers.map((product) => (
+          <li>
+            <div className="img">
+              <img src={product.img} alt="" />
+            </div>
+            <div className="textCard">
+              <p id="title">{product.name}</p>
+              <p id="category">{product.category}</p>
+              <p id="price">R${product.price}</p>
+              <button onClick={() => handleAddProduct(product)}>
+                Adicionar
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </ProductStyled>
+  );
+};
 
-
-
-    return(
-        <ProductStyled>
-            <ul>
-                {
-
-                listHamburgers.map((listHamburgers) => 
-                <li>
-                    <div className='img'>
-                        <img src={listHamburgers.img} alt="" />
-                    </div>
-                    <div className='textCard'>
-                        <p id='title'>{listHamburgers.name}</p>
-                        <p id='category'>{listHamburgers.category}</p>
-                        <p id='price'>R${listHamburgers.price}</p>
-                        <button onClick={() =>  funciotnFilter(listHamburgers.name)}>Adicionar</button>
-                    </div>
-                </li>
-               )}
-            </ul>
-        </ProductStyled>
-    )
-}
-
-export default Product
+export default Product;

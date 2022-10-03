@@ -1,27 +1,23 @@
-import CartProduct from "../CartProduct"
-import { CartStyle } from "./style"
+import CartProduct from "../CartProduct";
+import { CartStyle } from "./style";
 
-const Cart = ( {listCartProduct} ) => {
-    return(
-        <CartStyle>
-            <div id="topBarCart">
-                Carrinho de compras
-            </div>
-            <div id="bottomBarCart">
+const Cart = ({ listCartProduct, handleRemove }) => {
+  return (
+    <CartStyle>
+      <div id="topBarCart">Carrinho de compras</div>
+      {listCartProduct.length === 0 ? (
+        <div id="bottomBarCart">
+          <p id="pcart1">Sua sacola está vazia</p>
 
-                {
-                    listCartProduct.length === 0 ?
-                <p id="pcart1">Sua sacola está vazia</p>
-                <p id="pcart2">Adicione itens</p>   : 
+          <p id="pcart2">Adicione itens</p>
+        </div>
+      ) : (
+        listCartProduct.map((produtoCart) => (
+          <CartProduct key={produtoCart.id} produtoCart={produtoCart} handleRemove={handleRemove}/>
+        ))
+      )}
+    </CartStyle>
+  );
+};
 
-                <CartProduct listCartProduct={listCartProduct}/>
-            }
-            </div>
-
-        
-        </CartStyle>
-   
-    )
-}
-
-export default Cart 
+export default Cart;

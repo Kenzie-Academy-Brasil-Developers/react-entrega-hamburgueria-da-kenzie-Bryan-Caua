@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CartStyle = styled.div`
-margin-right: 5%;
+margin-right: 65px;
 margin-top: 7.5%;
 
 #topBarCart{
@@ -38,4 +38,15 @@ margin-top: 7.5%;
     font-size: 14px;
     color: #828282;
 }
+
+@media(max-width: 670px){
+
+    margin-top: 0%;
+    
+
+#topBarCart{
+    background-color: pink;
+}
+}
+
 `

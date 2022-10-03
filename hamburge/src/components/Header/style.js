@@ -43,7 +43,7 @@ img{
     height: 35%;
 }
 
-aside{
+form{
     display: flex;
     flex-direction: row;
     align-items: center;

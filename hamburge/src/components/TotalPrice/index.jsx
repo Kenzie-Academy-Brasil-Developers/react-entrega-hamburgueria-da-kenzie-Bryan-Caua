@@ -1,7 +1,7 @@
 import { TotalPriceStyle } from "./style"
 
 
-const TotalPrice = () => {
+const TotalPrice = ( {handleRemove} ) => {
     return(
         <TotalPriceStyle>
             <div>
@@ -9,7 +9,7 @@ const TotalPrice = () => {
                 <p id="pPrice2">R$ 40,00</p>
             </div>
             <div>
-                <button>Remover Todos</button>
+                <button onClick={() => handleRemove()}>Remover Todos</button>
             </div>
         </TotalPriceStyle>
     )
