@@ -13,7 +13,11 @@ const Cart = ({ listCartProduct, handleRemove }) => {
         </div>
       ) : (
         listCartProduct.map((produtoCart) => (
-          <CartProduct key={produtoCart.id} produtoCart={produtoCart} handleRemove={handleRemove}/>
+          <CartProduct
+            key={produtoCart.id}
+            produtoCart={produtoCart}
+            handleRemove={handleRemove}
+          />
         ))
       )}
     </CartStyle>

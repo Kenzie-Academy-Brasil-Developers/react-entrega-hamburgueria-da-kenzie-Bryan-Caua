@@ -17,8 +17,9 @@ align-items: center;
     }
 
     div{
-        margin-bottom: 2%;
-        margin-right: 24%;
+        margin-bottom: 0%;
+        margin-right: 80px;
+        max-width: 20px;
     }
 
     #cartProductP1{

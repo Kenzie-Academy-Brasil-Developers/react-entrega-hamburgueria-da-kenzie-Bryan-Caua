@@ -15,11 +15,14 @@ export const DashboardStyle = styled.div`
     #cartPriceInColumn{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #cartInCollumn{
         display: flex;
         flex-direction: column;
+        max-height: 400px;
     }
 
 

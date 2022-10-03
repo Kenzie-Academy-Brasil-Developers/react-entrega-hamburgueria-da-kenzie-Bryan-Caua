@@ -1,25 +1,21 @@
 import { HeaderStyle } from "./style";
 import logo from "../../assets/logo.svg";
-import { useState } from "react";
 
-const Header = ({listHamburgers, setListHamburgers}) => {
-    // const [busca, setBusca] = useState ('')
+const Header = ({handleFilter, busca, setBusca}) => {
 
-    // const tituloList = listHamburgers.name
 
-    // const itensFiltrados = tituloList.filter ((item) => item.startsWith(busca))
-    
 
   return (
     <HeaderStyle>
       <div>
         <img src={logo} alt="" />
 
-        <form>
+        <form onSubmit={(e) =>{e.preventDefault(); handleFilter()}}>
           <input type="text" placeholder="Digitar Pesquisa" 
-        //   value={busca} onChange={(e) => setBusca(e.target.value)}
+           onChange={(e) => setBusca(e.target.value)}
+           value={busca}
           />
-          <button type="button">Pesquise</button>
+          <button type="submit">Pesquise</button>
         </form>
       </div>
     </HeaderStyle>

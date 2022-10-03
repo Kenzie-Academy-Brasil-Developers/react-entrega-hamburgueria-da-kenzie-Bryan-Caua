@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ProductStyled = styled.div`
 width: 100vw;
-height: 100vh;
+height: 100rem;
 
 ul{
     display: flex;
@@ -25,8 +25,8 @@ li{
 
 .img{
     background: #F5F5F5;
-    height: 40%;
-    width: 100%;
+    max-height: 40%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

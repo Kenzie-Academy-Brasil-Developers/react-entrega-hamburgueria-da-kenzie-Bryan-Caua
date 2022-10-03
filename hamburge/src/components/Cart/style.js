@@ -39,13 +39,37 @@ margin-top: 7.5%;
     color: #828282;
 }
 
-@media(max-width: 670px){
-
-    margin-top: 0%;
+@media(max-width: 1220px){
     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5.5%;
+    flex-direction: column;
+    margin-right: 0px;
+    
+    #topBarCart{
+        background-color: #27AE60;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    }
+
+@media(max-width: 670px){
+    
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 5.5%;
+flex-direction: column;
+margin-right: 0px;
 
 #topBarCart{
-    background-color: pink;
+    background-color: #27AE60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 }
 
